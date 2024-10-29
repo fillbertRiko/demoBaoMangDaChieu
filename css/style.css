@@ -529,3 +529,7 @@ section .top-sections {
 a{
   text-decoration: none;
 }
+
+.tintuc .informationNews hr{
+  color: var(--color-primary-light);
+}
