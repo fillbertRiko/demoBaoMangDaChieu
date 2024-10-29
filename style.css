@@ -17,7 +17,7 @@
 }
 
 body {
-  font-family: "Courier New", Courier, monospace;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: var(--color-background);
   border: 2px solid var(--color-border);
   border-top: none;
@@ -172,10 +172,10 @@ hr {
   border: 1px solid var(--color-background);
   background-color: var(--color-primary-dark);
   color: var(--color-background);
-  font-size: 20px; /* Kích thước chữ */
-  font-family: "Courier New", Courier, monospace;
+  font-size: 16px; /* Kích thước chữ */
   font-weight: bold; /* Độ dày chữ */
-  text-decoration: none;
+  text-decoration:none;
+  letter-spacing: 1px;
   display: flex; /* Để căn giữa nội dung trong nút */
   justify-content: center; /* Căn giữa nội dung */
   align-items: center; /* Căn giữa theo chiều dọc */
