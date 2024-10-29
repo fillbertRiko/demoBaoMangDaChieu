@@ -1,0 +1,531 @@
+/* General styles */
+:root {
+  /* Danh mục màu chính */
+  --color-primary-dark: #4937a6; /* Màu tương ứng khu vực 1 */
+  --color-primary-medium: #8774fc; /* Màu tương ứng khu vực 2 */
+  --color-primary-normal: #c69aee;
+  --color-primary-tag: #916cdb;
+  --color-primary-light: #7cc8fc; /* Màu tương ứng khu vực 3 */
+  --color-accent: #a4fed5; /* Màu tương ứng khu vực 4 */
+
+  /* Các biến màu bổ sung khác */
+  --color-background: #ffffff; /* Màu nền */
+  --color-text: #333333; /* Màu chữ */
+  --color-border: #e0e0e03e; /* Màu viền */
+  --color-hover: #f5f5f5; /* Màu khi hover */
+  --color-h6: #626262;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: var(--color-background);
+  border: 2px solid var(--color-border);
+  border-top: none;
+  padding-top: 50px;
+}
+/* Thanh news-flash tổng thể */
+.news-flash {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  z-index: 100;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%; /* Chiếm toàn bộ chiều rộng của trang */
+  background-color: var(--color-primary-dark); /* Màu nền của thanh tổng thể */
+  border: 2px solid var(--color-border);
+}
+
+/* Text đứng yên (static-text) */
+.static-text {
+  font-size: 22px;
+  z-index: 20; /* Đặt cao hơn scrolling-text */
+  margin-right: 10px;
+  font-weight: bold;
+  padding: 10px 30px; /* Điều chỉnh padding để cân đối */
+  background-color: var(--color-background); /* Nền của static-text */
+  color: var(--color-primary-dark);
+  height: 100%; /* Đảm bảo static-text fit chiều cao của thanh news-flash */
+  display: flex;
+  align-items: center; /* Đảm bảo text căn giữa theo chiều dọc */
+}
+
+/* Text chạy ngang (scrolling-text) */
+.scrolling-text {
+  background-color: var(
+    --color-primary-dark
+  ); /* Đảm bảo toàn bộ thanh có nền */
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color-background); /* Màu chữ */
+  position: absolute;
+  white-space: nowrap;
+  animation: scroll-left 60s linear infinite;
+  left: 0; /* Điều chỉnh bắt đầu từ vị trí 0 thay vì 100% */
+  width: 100%; /* Chiếm toàn bộ chiều rộng để nền áp dụng cho toàn bộ thanh */
+  z-index: 10; /* Z-index thấp hơn static-text */
+  height: 100%; /* Đảm bảo chiều cao phù hợp với thanh */
+  display: flex;
+  align-items: center; /* Căn giữa text theo chiều dọc */
+  overflow: hidden;
+  padding-left: 10px; /* Tạo khoảng cách cho text cuộn */
+}
+
+/* Đảm bảo toàn bộ thanh có nền */
+.scrolling-text::before,
+.scrolling-text::after {
+  content: attr(data-text) " " attr(data-text) " " attr(data-text); /* Nhân ba nội dung để không bị mất chữ */
+  background-color: var(--color-primary-dark); /* Màu nền cho text cuộn */
+}
+
+/* Hiệu ứng chạy ngang từ phải sang trái */
+@keyframes scroll-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Phần logo */
+/* Phần logo */
+.header {
+  padding: 1px;
+  margin-top: -24.5px;
+  background-color: white; /* Màu nền trắng */
+  padding-left: 1px;
+  color: var(--color-background);
+  display: flex;
+  border: 3px solid var(--color-primary-dark);
+  flex-direction: column;
+  padding-bottom: 1px;
+  max-height: 355px;
+}
+
+.logo {
+  text-align: center;
+  padding: 10px;
+  padding-left: 15px;
+  margin-top: none;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+}
+
+hr {
+  background-color: var(--color-primary-dark);
+  border: 2px solid var(--color-primary-dark);
+  width: 100%;
+  align-items: center;
+  align-content: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.img-logo {
+  width: 700px;
+  height: 200px;
+  margin-top: none;
+  object-fit: cover;
+  margin-bottom: 40px;
+}
+
+.logo-head {
+  max-height: 400px;
+}
+
+/* Menu tổng thể */
+.menu {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  padding-bottom: none;
+  padding-top: 1px;
+  max-height: 1px;
+  width: 100%; /* Để menu chiếm toàn bộ chiều rộng */
+  align-content: center;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between; /* Tạo khoảng cách giữa phần trái và phần phải */
+  align-items: center; /* Căn giữa chiều dọc các phần tử */
+}
+
+/* Cấu trúc Flex cho nav-left */
+.nav-left {
+  margin-left: 35px;
+  display: flex; /* Sử dụng Flexbox */
+  justify-content: space-between; /* Căn chỉnh các nút đều nhau */
+  align-items: stretch; /* Đảm bảo các nút có chiều cao bằng nhau */
+}
+
+/* Đặt kiểu dáng cho tất cả các nút (btn) trong menu */
+.btn {
+  padding: 10px; /* Padding cho nút */
+  height: 50px; /* Chiều cao cố định cho nút */
+  box-sizing: border-box; /* Tính toán padding và border vào kích thước */
+  border-radius: 5px;
+  border: 1px solid var(--color-background);
+  background-color: var(--color-primary-dark);
+  color: var(--color-background);
+  font-size: 20px; /* Kích thước chữ */
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold; /* Độ dày chữ */
+  text-decoration: none;
+  display: flex; /* Để căn giữa nội dung trong nút */
+  justify-content: center; /* Căn giữa nội dung */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  flex: 1; /* Chiều rộng bằng nhau */
+  margin-right: 30px; /* Tăng khoảng cách giữa các nút */
+  white-space: nowrap; /* Ngăn không cho văn bản xuống dòng */
+}
+
+/* Đảm bảo nút cuối cùng không có margin */
+.nav-left .btn:last-child {
+  margin-right: 0; /* Xóa margin phải cho nút cuối cùng */
+}
+
+/* Cấu trúc cho dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--color-background);
+  min-width: 160px; /* Đặt chiều ngang tối thiểu cho tất cả dropdown */
+  width: fit-content; /* Hoặc đặt chiều rộng cố định để các dropdown có cùng kích thước */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-top: 10px;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+/* Hiệu ứng khi hover vào nút dropdown */
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+}
+
+.dropdown-content a {
+  color: var(--color-background);
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  border: 1px solid var(--color-background);
+  margin-top: -1px;
+  background-color: var(--color-primary-dark);
+  text-align: left;
+  width: 100%; /* Đảm bảo các mục con cũng phù hợp với chiều ngang của dropdown */
+}
+
+/* Hover thay đổi màu sắc */
+.dropdown-content a:hover {
+  background-color: var(--color-background);
+  color: var(--color-primary-dark);
+}
+/* Nút tìm kiếm */
+.nav-right {
+  display: flex;
+  align-items: center; /* Căn giữa chiều dọc cho thanh tìm kiếm */
+}
+
+.search-bar {
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid var(--color-border);
+  margin-right: 10px; /* Khoảng cách giữa thanh tìm kiếm và nút tìm kiếm */
+}
+
+#searchButton {
+  padding: 0px 5px;
+  border-radius: 5px;
+  background-color: var(--color-primary-dark);
+  color: var(--color-background);
+  border: none;
+  cursor: pointer;
+  border: 2px solid var(--color-border);
+  font-size: 17px;
+  max-height: 30px;
+}
+
+#searchButton:hover {
+  background-color: var(--color-background);
+  color: var(--color-primary-dark);
+}
+
+#searchButton {
+  background-image: linear-gradient(
+    120deg,
+    var(--color-primary-dark),
+    var(--color-primary-light),
+    var(--color-primary-medium),
+    var(--color-primary-dark),
+    var(--color-primary-light),
+    var(--color-primary-medium),
+    var(--color-primary-dark),
+    var(--color-primary-light),
+    var(--color-primary-medium),
+    var(--color-primary-dark),
+    var(--color-primary-light),
+    var(--color-primary-medium)
+  ); /* Gradient từ đỏ, xanh dương, xanh lá */
+  background-size: 300% 300%;
+  background-clip: text; /* Chỉ áp dụng gradient vào chữ */
+  -webkit-background-clip: text; /* Hỗ trợ trên Webkit (Chrome, Safari) */
+  color: transparent; /* Giúp hiển thị gradient thay vì màu chữ */
+  animation: gradient-animation 10s ease infinite; /* Hiệu ứng chuyển động */
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.menu .nav-container p,
+.nav-container button p {
+  background-image: linear-gradient(
+    120deg,
+    var(--color-primary-light),
+    var(--color-hover),
+    var(--color-primary-light),
+    var(--color-hover),
+    var(--color-primary-light),
+    var(--color-hover),
+    var(--color-primary-light),
+    var(--color-hover),
+    var(--color-primary-light),
+    var(--color-hover),
+    var(--color-primary-light),
+    var(--color-hover),
+    var(--color-primary-light),
+    var(--color-hover)
+  ); /* Gradient từ đỏ, xanh dương, xanh lá */
+  background-size: 300% 300%;
+  background-clip: text; /* Chỉ áp dụng gradient vào chữ */
+  -webkit-background-clip: text; /* Hỗ trợ trên Webkit (Chrome, Safari) */
+  color: transparent; /* Giúp hiển thị gradient thay vì màu chữ */
+  animation: gradient-animation 10s ease infinite; /* Hiệu ứng chuyển động */
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.tags {
+  background-color: var(--color-primary-normal); /* Màu nền nhẹ cho section */
+  padding: 10px 25px; /* Padding cho section */
+  border: 1px solid var(--color-border); /* Viền nhẹ cho section */
+  border-radius: 5px; /* Bo góc */
+}
+
+.tags p {
+  margin: 0; /* Xóa margin cho đoạn văn */
+  font-size: 20px; /* Kích thước chữ */
+  font-weight: bold;
+  color: var(--color-primary-dark); /* Màu chữ */
+}
+
+.tag {
+  background-color: var(--color-background); /* Màu nền cho thẻ */
+  font-weight: bold;
+  color: var(--color-primary-dark); /* Màu chữ thẻ */
+  padding: 5px 10px; /* Padding cho thẻ */
+  border-radius: 3px; /* Bo góc cho thẻ */
+  margin-right: 5px; /* Khoảng cách giữa các thẻ */
+  border: none; /* Xóa viền nút */
+  cursor: pointer; /* Con trỏ chuột khi hover */
+  display: inline-block; /* Hiển thị thẻ cạnh nhau */
+  text-decoration: none; /* Không gạch chân */
+}
+
+.tag:hover {
+  background-color: var(--color-border); /* Thay đổi màu nền khi hover */
+}
+
+footer {
+  background-color: var(--color-primary-dark);
+  color: var(--color-background);
+  padding: 10px 15px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Khoảng cách giữa các phần */
+}
+
+.top-sections {
+  display: flex; /* Đặt các phần ở cùng một hàng */
+  justify-content: space-between; /* Tạo khoảng cách giữa các phần */
+}
+
+.updates {
+  flex: 2; /* Chia đều không gian cho từng phần */
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.featured,
+.most-read {
+  margin-right: 20px;
+  flex: 1;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.updates:last-child,
+.featured:last-child {
+  margin-right: 0; /* Loại bỏ khoảng cách bên phải cho phần cuối cùng */
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.popular-stories {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.updates,
+.featured,
+.most-read,
+.popular-stories {
+  margin-top: 20px;
+  border: 2px solid var(--color-border);
+  background-color: var(--color-border);
+  color: var(--color-primary-dark);
+}
+
+.popular-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+article {
+  padding: 10px;
+}
+
+article img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.section {
+  border: 3px solid var(--color-primary-dark);
+  border-radius: 10px;
+}
+
+section .top-sections {
+  max-height: 1000px;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  min-width: 100px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  width: 14px;
+}
+
+.clear-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 10px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.search {
+  border: 1px solid grey;
+  border-radius: 5px;
+  height: 20px;
+  width: 100%;
+  padding: 2px 23px 2px 30px;
+  outline: 0;
+  background-color: #f5f5f5;
+}
+
+.search:hover,
+.search:focus {
+  border: 1.5px solid #009688;
+  background-color: white;
+}
+
+#tintuc{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  font-family:'Times New Roman', Times, serif;
+  width: 100%;
+}
+
+#tintuc h6{
+  font-size: 20px;
+  color: var(--color-h6);
+  margin-bottom: 10px;
+}
+
+#tintuc h1{
+  font-size: 55px;
+}
+
+#tintuc p i{
+  font-size: 35px;
+  color: var(--color-h6);
+}
+
+#timeLine {
+  font-size: 18px;
+  color: var(--color-h6);
+  opacity: 0.8;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.timeLine-left{
+  display: left ;
+}
+
+a{
+  text-decoration: none;
+}
