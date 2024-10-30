@@ -637,6 +637,10 @@
     height: auto;
     border-radius: 5px;
   }
+
+  article a{
+    color: var(--color-text);
+  }
   
   .section {
     border: 3px solid var(--color-primary-dark);
