@@ -541,6 +541,9 @@
     display: flex;
     flex-direction: column;
     gap: 20px; /* Khoảng cách giữa các phần */
+    font-family: "Merriweather", serif;
+    letter-spacing: 1px;
+    line-height: 1.6;
   }
   
   .top-sections {
