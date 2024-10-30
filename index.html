@@ -10,9 +10,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+    </style>
     
 </head>
 <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
     <!-- Top News Flash Bar -->
     <div class="news-flash">
@@ -40,9 +62,18 @@
         <div class="menu">
             <nav class="nav-container">
                 <div class="nav-left">
-                    <a href="tintuc.html" class="btn">
-                        <p>Tin tức</p>
-                    </a>
+                    <div class="dropdown">
+                        <button class="dropbtn btn">
+                            <a href="tintuc.html">
+                                <p>Tin tức</p>
+                            </a>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="chinhtri.html" class="btn">Chính trị</a>
+                            <a href="kinhte.html" class="btn">Kinh tế</a>
+                            <a href="xahoi.html" class="btn">Xã Hội</a>
+                        </div>
+                    </div>
                     <div class="dropdown">
                         <button class="dropbtn btn">
                             <a href="vanHoa.html">
@@ -157,7 +188,7 @@
                 <article>
                     <a href="#"><img src="RobotHoangDa.jpeg" alt="" style="height: 190px;"></a>
                     <h4 style="font-size:18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px; ">Phim hoạt hình "Robot hoang dã" thống trị phòng vé Bắc Mỹ</h4>
-                    <span>Nguồn: Theo Báo ThanhNiênn</span>
+                    <span>Nguồn: Theo Báo Thanh Niên</span>
                 </article>
                 <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
                 <article>
@@ -251,6 +282,28 @@
     </footer>
 
     <script src="javaScript.js"></script>
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+    </script>
+    
 
 </body>
 </html>

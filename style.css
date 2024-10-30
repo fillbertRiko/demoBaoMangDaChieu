@@ -562,6 +562,30 @@
     padding: 20px;
     border-radius: 5px;
   }
+
+  .main-containers{
+    display: flex;
+  }
+
+  .section1{
+    width: 80%;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--color-border);
+    background-color: var(--color-border);
+    color: var(--color-text);
+  }
+
+  .section2{
+    width: 20%;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--color-border);
+    background-color: var(--color-border);
+    color: var(--color-primary-dark);
+  }
   
   .updates:last-child,
   .featured:last-child {
