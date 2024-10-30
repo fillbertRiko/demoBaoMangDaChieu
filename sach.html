@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine Plus</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your external CSS file -->
+    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        #myBtn:hover {
+            background-color: #555;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <!-- Top News Flash Bar -->
+    <div class="news-flash">
+        <span class="static-text">
+            <p>Tin Nhanh:</p>
+        </span>
+        <div class="scrolling-text"
+            data-text="&nbsp
+        Nâng cao sức khỏe người Việt với sản phẩm từ tỏi
+        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Cập nhật kiến thực mới cho cán bộ công đoàn chủ chốt &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Thêm một huyện của Bình Định hoàn thành nông thôn mới  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Phó Chủ tịch Quốc hội Trần Quang Phuong tiếp xúc cử tri Quảng Ngãi"
+            style="font-style: italic; font-weight: 100;font-size: 16px;">
+            Thứ 3, Ngày 1 Tháng 10 Năm 2024
+        </div>
+    </div>
+
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <div class="logo-head">
+                <a href="index.html">
+                    <img src="logoDaChieu.jpeg" class="img-logo">
+                </a>
+
+            </div>
+            <hr>
+            <div class="menu">
+                <nav class="nav-container">
+                    <div class="nav-left">
+                        <div class="dropdown">
+                            <button class="dropbtn btn">
+                                <a href="tintuc.html">
+                                    <p>Tin tức</p>
+                                </a>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="chinhtri.html" class="btn">Chính trị</a>
+                                <a href="kinhte.html" class="btn">Kinh tế</a>
+                                <a href="xahoi.html" class="btn">Xã Hội</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn btn">
+                                <a href="vanHoa.html">
+                                    <p>Văn hóa</p>
+                                </a>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="nghethuat.html" class="btn">Nghệ thuật</a>
+                                <a href="sach.html" class="btn">Sách</a>
+                                <a href="disan.html" class="btn">Di sản</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn btn">
+                                <a href="duLich.html">
+                                    <p>Du lịch</p>
+                                </a>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="diemDen.html" class="btn">Điểm đến</a>
+                                <a href="camNang.html" class="btn">Cẩm nang</a>
+                                <a href="amThuc.html" class="btn">Ẩm thực</a>
+                            </div>
+                        </div>
+                        <a href="congNghe.html" class="btn">
+                            <p>Công nghệ</p>
+                        </a>
+                        <div class="dropdown">
+                            <button class="dropbtn btn">
+                                <a href="thoiTrang.html">
+                                    <p>Thời trang</p>
+                                </a>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="mixAndMatch.html" class="btn">Mix and match</a>
+                                <a href="lamDep.html" class="btn">Làm đẹp</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn btn">
+                                <a href="amNhac.html">
+                                    <p>Âm nhạc</p>
+                                </a>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="hienDai.html" class="btn">Hiện đại</a>
+                                <a href="duongDai.html" class="btn">Đương đại</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <a href="phimAnh.html" class="dropbtn btn">
+                                <p>Phim ảnh</p>
+                            </a>
+                            <div class="dropdown-content">
+                                <a href="dienAnh.html" class="btn">Điện ảnh</a>
+                                <a href="truyenHinh.html" class="btn">Truyền hình</a>
+                                <a href="phimTheoTheLoai.html" class="btn">Phim theo thể loại</a>
+                                <a href="dienVien.html" class="btn">Diễn viên</a>
+                                <a href="hauTruong.html" class="btn">Hậu trường</a>
+                                <a href="giaiThuong.html" class="btn">Giải thưởng</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-right">
+
+                        <div class="wrapper">
+                            <img class="search-icon"
+                                src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU2Ljk2NiA1Ni45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2Ljk2NiA1Ni45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMgIHMxMC4zMTgsMjMsMjMsMjNjNC43NjEsMCw5LjI5OC0xLjQzNiwxMy4xNzctNC4xNjJsMTMuNjYxLDE0LjIwOGMwLjU3MSwwLjU5MywxLjMzOSwwLjkyLDIuMTYyLDAuOTIgIGMwLjc3OSwwLDEuNTE4LTAuMjk3LDIuMDc5LTAuODM3QzU2LjI1NSw1NC45ODIsNTYuMjkzLDUzLjA4LDU1LjE0Niw1MS44ODd6IE0yMy45ODQsNmM5LjM3NCwwLDE3LDcuNjI2LDE3LDE3cy03LjYyNiwxNy0xNywxNyAgcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
+                            <input class="search" placeholder="Tìm Kiếm..." type="text">
+                            <img class="clear-icon"
+                                src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjk3NiA1MS45NzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxLjk3NiA1MS45NzY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQuMzczLDcuNjAzYy0xMC4xMzctMTAuMTM3LTI2LjYzMi0xMC4xMzgtMzYuNzcsMGMtMTAuMTM4LDEwLjEzOC0xMC4xMzcsMjYuNjMyLDAsMzYuNzdzMjYuNjMyLDEwLjEzOCwzNi43NywwICAgQzU0LjUxLDM0LjIzNSw1NC41MSwxNy43NCw0NC4zNzMsNy42MDN6IE0zNi4yNDEsMzYuMjQxYy0wLjc4MSwwLjc4MS0yLjA0NywwLjc4MS0yLjgyOCwwbC03LjQyNS03LjQyNWwtNy43NzgsNy43NzggICBjLTAuNzgxLDAuNzgxLTIuMDQ3LDAuNzgxLTIuODI4LDBjLTAuNzgxLTAuNzgxLTAuNzgxLTIuMDQ3LDAtMi44MjhsNy43NzgtNy43NzhsLTcuNDI1LTcuNDI1Yy0wLjc4MS0wLjc4MS0wLjc4MS0yLjA0OCwwLTIuODI4ICAgYzAuNzgxLTAuNzgxLDIuMDQ3LTAuNzgxLDIuODI4LDBsNy40MjUsNy40MjVsNy4wNzEtNy4wNzFjMC43ODEtMC43ODEsMi4wNDctMC43ODEsMi44MjgsMGMwLjc4MSwwLjc4MSwwLjc4MSwyLjA0NywwLDIuODI4ICAgbC03LjA3MSw3LjA3MWw3LjQyNSw3LjQyNUMzNy4wMjIsMzQuMTk0LDM3LjAyMiwzNS40NiwzNi4yNDEsMzYuMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+    </header>
+
+    <!-- Popular Tags -->
+    <!-- Đang trong quá trình phát triển-->
+    <section class="tags">
+        <p>Gợi ý:
+            <button class="tag" onclick="searchTag('#health')">#health</button>
+            <button class="tag" onclick="searchTag('#world')">#world</button>
+            <button class="tag" onclick="searchTag('#business')">#business</button>
+            <button class="tag" onclick="searchTag('#sports')">#sports</button>
+            <button class="tag" onclick="searchTag('#news')">#news</button>
+        </p>
+    </section>
+
+
+    <main>
+        <h1 class="headingNews" style="font-size: 25px;opacity: 0.6;width: 100%;text-align: center;padding-top: 20px;">SÁCH</h1>
+        <div class="main-containers">
+            
+            <!-- Updates Section -->
+
+            <!-- Featured Articles Section -->
+            <section class="section2" style="width: 80%;color: black;">
+                <div class="day26">
+                    
+                    <h2 class="headingNews1" style="font-size: 35px;font-weight: bold;padding: 30px;padding-top: 1px;text-align: center;">Thủ tướng Phạm Minh Chính gặp Tổng Bí thư,<br> Chủ tịch Trung Quốc Tập Cận Bình</h2>
+                    <div class="date" style="font-size: 15px;font-weight: bold;font-style: italic;margin-bottom: 20px;text-align: left;text-align: right;margin-right: 60px;color: #4937a6;">
+                        PV (theo TTXVN)  -  Thứ năm, ngày 24/10/2024 09:23 GMT+7
+                    </div>
+                    <img src="/img/VTV_24.10.2024.jpeg" alt="" style="width:1000px">
+                    <p class="shortNews" style="font-weight: bold;padding-top: 10px;opacity: 0.8;max-width: 60%;margin-left: 40px;color: #8774fc;">
+                        VTV.vn - Thủ tướng Phạm Minh Chính đánh giá cao quan hệ hai Đảng, hai nước thời gian qua không ngừng được củng cố và phát triển.
+                    </p>
+                    <p class="noiDung" style="padding:70px;text-align: justify;padding-top: 20px;">
+                          &nbsp; &nbsp;&nbsp;&nbsp; Nhân dịp tham dự Hội nghị Cấp cao BRICS mở rộng tại Kazan, Liên bang Nga, ngày 23/10 (theo giờ địa phương), Thủ tướng Chính phủ Phạm Minh Chính đã có cuộc gặp ngắn với Tổng Bí thư Ban Chấp hành Trung ương Đảng Cộng sản Trung Quốc, Chủ tịch nước Cộng hòa nhân dân Trung Hoa Tập Cận Bình.
+        
+        Tại cuộc gặp, Thủ tướng Chính phủ Phạm Minh Chính trân trọng chuyển lời thăm hỏi chân thành của Tổng Bí thư Tô Lâm, Chủ tịch nước Lương Cường, Chủ tịch Quốc hội Trần Thanh Mẫn tới Tổng Bí thư, Chủ tịch nước Tập Cận Bình và các đồng chí lãnh đạo chủ chốt Trung Quốc; chúc mừng những thành tựu to lớn, mang ý nghĩa lịch sử trong công cuộc xây dựng đất nước 75 năm qua của Đảng, Nhà nước, nhân dân Trung Quốc; khẳng định Việt Nam luôn coi phát triển quan hệ với Trung Quốc là chủ trương nhất quán, yêu cầu khách quan, lựa chọn chiến lược, ưu tiên hàng đầu trong đường lối đối ngoại của Việt Nam.
+        
+        Thủ tướng Phạm Minh Chính hoan nghênh những đóng góp nổi bật của Trung Quốc trong cơ chế BRICS, bày tỏ sẵn sàng phối hợp tích cực với các quốc gia thành viên BRICS thúc đẩy hơn nữa vai trò của các nước đang phát triển trong xử lý các vấn đề hòa bình và phát triển toàn cầu.
+        
+        Về quan hệ song phương Việt Nam - Trung Quốc, Thủ tướng Phạm Minh Chính đánh giá cao quan hệ hai Đảng, hai nước thời gian qua không ngừng được củng cố và phát triển, bước sang giai đoạn phát triển mới với mục tiêu xây dựng Cộng đồng chia sẻ tương lai Việt Nam - Trung Quốc có ý nghĩa chiến lược theo định hướng "6 hơn".
+        
+        Thủ tướng đề nghị hai bên tiếp tục tăng cường trao đổi, tiếp xúc cấp cao; thúc đẩy hợp tác thực chất trên các lĩnh vực đi vào chiều sâu, trong đó có kết nối giao thông, nhất là ưu tiên đẩy nhanh triển khai 3 tuyến đường sắt khổ tiêu chuẩn kết nối Việt Nam với Trung Quốc (Lào Cai - Hà Nội - Hải Phòng, Lạng Sơn - Hà Nội, Móng Cái - Hạ Long - Hải Phòng) nhằm thúc đẩy kết nối hai nền kinh tế; phối hợp tổ chức tốt các hoạt động kỷ niệm 75 năm thiết lập quan hệ ngoại giao hai nước và Năm Giao lưu nhân văn Việt - Trung 2025.
+        
+        Tổng Bí thư, Chủ tịch Trung Quốc Tập Cận Bình gửi lời cảm ơn và thăm hỏi chân thành tới Tổng Bí thư Tô Lâm và các đồng chí lãnh đạo chủ chốt Việt Nam; chúc mừng đồng chí Lương Cường vừa được bầu giữ chức Chủ tịch nước; chúc mừng những thành tựu Việt Nam đã đạt được trên tất cả các mặt, nhất là kinh tế - xã hội.
+        
+        Tổng Bí thư, Chủ tịch Tập Cận Bình bày tỏ vui mừng trước xu thế phát triển, ngày càng thực chất, hiệu quả của quan hệ Trung-Việt; nhấn mạnh trong bất cứ hoàn cảnh nào cũng cần thúc đẩy quan hệ theo tinh thần "4 tốt" và những nhận thức chung cấp cao đã đạt được; sẵn sàng cùng Việt Nam duy trì trao đổi chiến lược, thúc đẩy làm sâu sắc hơn nữa hợp tác thực chất, đưa quan hệ Đối tác hợp tác chiến lược toàn diện, Cộng đồng chia sẻ tương lai Trung - Việt có ý nghĩa chiến lược không ngừng đi vào chiều sâu. Để thúc đẩy kết nối giữa hai nền kinh tế, Tổng Bí thư, Chủ tịch Trung Quốc Tập Cận Bình cho biết sẽ chỉ đạo các cơ quan liên quan Trung Quốc thúc đẩy kết nối giao thông Trung - Việt.
+                    </p>
+                </div>
+                <hr style="opacity: 0.2;width: 40%;">
+                <div class="day26">
+                    
+                    <h2 class="headingNews1" style="font-size: 35px;font-weight: bold;padding: 30px;padding-top: 1px;text-align: center;">Thủ tướng Phạm Minh Chính gặp Tổng Bí thư,<br> Chủ tịch Trung Quốc Tập Cận Bình</h2>
+                    <div class="date" style="font-size: 15px;font-weight: bold;font-style: italic;margin-bottom: 20px;text-align: left;text-align: right;margin-right: 60px;color: #4937a6;">
+                        PV (theo TTXVN)  -  Thứ năm, ngày 24/10/2024 09:23 GMT+7
+                    </div>
+                    <img src="/img/VTV_24.10.2024.jpeg" alt="" style="width:1000px">
+                    <p class="shortNews" style="font-weight: bold;padding-top: 10px;opacity: 0.8;max-width: 60%;margin-left: 40px;color: #8774fc;">
+                        VTV.vn - Thủ tướng Phạm Minh Chính đánh giá cao quan hệ hai Đảng, hai nước thời gian qua không ngừng được củng cố và phát triển.
+                    </p>
+                    <p class="noiDung" style="padding:70px;text-align: justify;padding-top: 20px;">
+                          &nbsp; &nbsp;&nbsp;&nbsp; Nhân dịp tham dự Hội nghị Cấp cao BRICS mở rộng tại Kazan, Liên bang Nga, ngày 23/10 (theo giờ địa phương), Thủ tướng Chính phủ Phạm Minh Chính đã có cuộc gặp ngắn với Tổng Bí thư Ban Chấp hành Trung ương Đảng Cộng sản Trung Quốc, Chủ tịch nước Cộng hòa nhân dân Trung Hoa Tập Cận Bình.
+        
+        Tại cuộc gặp, Thủ tướng Chính phủ Phạm Minh Chính trân trọng chuyển lời thăm hỏi chân thành của Tổng Bí thư Tô Lâm, Chủ tịch nước Lương Cường, Chủ tịch Quốc hội Trần Thanh Mẫn tới Tổng Bí thư, Chủ tịch nước Tập Cận Bình và các đồng chí lãnh đạo chủ chốt Trung Quốc; chúc mừng những thành tựu to lớn, mang ý nghĩa lịch sử trong công cuộc xây dựng đất nước 75 năm qua của Đảng, Nhà nước, nhân dân Trung Quốc; khẳng định Việt Nam luôn coi phát triển quan hệ với Trung Quốc là chủ trương nhất quán, yêu cầu khách quan, lựa chọn chiến lược, ưu tiên hàng đầu trong đường lối đối ngoại của Việt Nam.
+        
+        Thủ tướng Phạm Minh Chính hoan nghênh những đóng góp nổi bật của Trung Quốc trong cơ chế BRICS, bày tỏ sẵn sàng phối hợp tích cực với các quốc gia thành viên BRICS thúc đẩy hơn nữa vai trò của các nước đang phát triển trong xử lý các vấn đề hòa bình và phát triển toàn cầu.
+        
+        Về quan hệ song phương Việt Nam - Trung Quốc, Thủ tướng Phạm Minh Chính đánh giá cao quan hệ hai Đảng, hai nước thời gian qua không ngừng được củng cố và phát triển, bước sang giai đoạn phát triển mới với mục tiêu xây dựng Cộng đồng chia sẻ tương lai Việt Nam - Trung Quốc có ý nghĩa chiến lược theo định hướng "6 hơn".
+        
+        Thủ tướng đề nghị hai bên tiếp tục tăng cường trao đổi, tiếp xúc cấp cao; thúc đẩy hợp tác thực chất trên các lĩnh vực đi vào chiều sâu, trong đó có kết nối giao thông, nhất là ưu tiên đẩy nhanh triển khai 3 tuyến đường sắt khổ tiêu chuẩn kết nối Việt Nam với Trung Quốc (Lào Cai - Hà Nội - Hải Phòng, Lạng Sơn - Hà Nội, Móng Cái - Hạ Long - Hải Phòng) nhằm thúc đẩy kết nối hai nền kinh tế; phối hợp tổ chức tốt các hoạt động kỷ niệm 75 năm thiết lập quan hệ ngoại giao hai nước và Năm Giao lưu nhân văn Việt - Trung 2025.
+        
+        Tổng Bí thư, Chủ tịch Trung Quốc Tập Cận Bình gửi lời cảm ơn và thăm hỏi chân thành tới Tổng Bí thư Tô Lâm và các đồng chí lãnh đạo chủ chốt Việt Nam; chúc mừng đồng chí Lương Cường vừa được bầu giữ chức Chủ tịch nước; chúc mừng những thành tựu Việt Nam đã đạt được trên tất cả các mặt, nhất là kinh tế - xã hội.
+        
+        Tổng Bí thư, Chủ tịch Tập Cận Bình bày tỏ vui mừng trước xu thế phát triển, ngày càng thực chất, hiệu quả của quan hệ Trung-Việt; nhấn mạnh trong bất cứ hoàn cảnh nào cũng cần thúc đẩy quan hệ theo tinh thần "4 tốt" và những nhận thức chung cấp cao đã đạt được; sẵn sàng cùng Việt Nam duy trì trao đổi chiến lược, thúc đẩy làm sâu sắc hơn nữa hợp tác thực chất, đưa quan hệ Đối tác hợp tác chiến lược toàn diện, Cộng đồng chia sẻ tương lai Trung - Việt có ý nghĩa chiến lược không ngừng đi vào chiều sâu. Để thúc đẩy kết nối giữa hai nền kinh tế, Tổng Bí thư, Chủ tịch Trung Quốc Tập Cận Bình cho biết sẽ chỉ đạo các cơ quan liên quan Trung Quốc thúc đẩy kết nối giao thông Trung - Việt.
+                    </p>
+                </div>
+               </section>    
+
+
+
+            <!-- Most Read Section -->
+            <section class="section2" style="width: 20%;">
+                <h2>Tin đọc nhiều</h2>
+                <hr class="section">
+                <article style="margin-bottom: 3px;margin-top: 10px;">
+                    <h4
+                        style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">
+                        Tổng Bí thư, Chủ tịch nước Tô Lâm thăm Trường liên cấp mang tên Chủ tịch Hồ Chí Minh</h4>
+                    <snan>Nguồn: Theo Báo Nhân Dân</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article>
+                    <h4
+                        style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">
+                        Tổng Bí thư Chủ tịch nước Tô Lâm thăm và làm việc với Tổng cục II, Bộ Quốc phòng</h4>
+                    <span>Nguồn: Theo Báo Nhân Dân</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article>
+                    <h4
+                        style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">
+                        Phó Thủ tướng, Bộ trưởng Ngoại giao Bùi Thanh Sơn trả lời phỏng vấn trước chuyến công tác của
+                        Tổng Bí thư Chủ tịch nước Tô Lâm</h4>
+                    <span>Nguồn: Theo Báo Nhân Dân</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+            </section>
+        </div>
+
+        <!-- Popular Stories Section -->
+        <section class="popular-stories">
+            <h2>Xem Thêm</h2>
+            <hr class="section" style="margin-bottom: 25px;">
+            <div class="popular-grid"
+                style="display: flex;flex-direction: row;align-items: justify;justify-content: space-between;">
+                <article style="max-width: 18%;margin-left: 25px;">
+                    <img src="NVIDIATrungQuoc.jpeg" alt="Story Image" style="max-height: 150px;max-width: 300px;">
+                    <h3 style="margin-top: 10px;margin-bottom: 10px;text-align: justify;justify-content: center;">Những
+                        công ty Trung Quốc nuôi tham vọng thay thế Nvidia</h3>
+                    <span>Nguồn: Theo Báo Thanh Niên</span>
+                </article>
+                <hr style="width: 0.1px; margin-left: -150px; margin-right: -150px;border: #7cc8fc; opacity: 0.3;">
+                <article style="max-width: 18%;">
+                    <img src="nhacDongThienDuc.jpeg" alt="Story Image" style="max-height: 150px;max-width: 300px;">
+                    <h3 style="margin-top: 10px;margin-bottom: 10px;text-align: justify;justify-content: center;">Một
+                        vòng Việt Nam của Đông Thiên Đức quá hot, cả chục triệu khán giả mê</h3>
+                    <span>Nguồn: Theo Báo Tuổi Trẻ</span>
+                </article>
+                <hr style="width: 0.1px; margin-left: -150px; margin-right: -150px;border: #7cc8fc;opacity: 0.3;;">
+                <article style="max-width: 20%;">
+                    <img src="tinBaoTienPhongNga.jpeg" alt="Story Image" style="max-height: 150px;max-width: 300px;">
+                    <h3 style="margin-top: 10px;margin-bottom: 10px;text-align: justify;justify-content: center;">Nga tự
+                        tin sắp kiểm soát hoàn toàn Cộng hòa Nhân dân tự xưng Lugansk</h3>
+                    <span>Nguồn: Theo Báo Tiền Phong</span>
+                </article>
+                <hr style="width: 0.1px; margin-left: -150px; margin-right: -150px;border: #7cc8fc;opacity: 0.3;;">
+                <article style="max-width: 20%;margin-right: 20px;">
+                    <img src="thumpnailHasmal.jpeg" alt="Story Image" style="max-width: 300px;max-height: 150px;">
+                    <h3 style="margin-top: 10px;margin-bottom:10px;text-align: justify;justify-content: center ;">Chỉ
+                        huy Hamas thiệt mạng trong cuộc tấn công của Isarel làm việc cho Liên Hợp Quốc</h3>
+                    <span>Nguồn: Theo Báo Tiền Phong</span>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <ul>
+            <li>Trang thông tin điện tử Đa Chiều</li>
+            <li>Trụ sở chính: 36 Xuân Thủy, Cầu Giấy, Hà Nội</li>
+            <li>Tel: +(84)12 3456.</li>
+            <li>E-mail: dachieu@gmail.com</li>
+        </ul>
+    </footer>
+
+    <script src="javaScript.js"></script>
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</body>
+
+</html>
