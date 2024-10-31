@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine Plus</title>
+    <link rel="stylesheet" href="../../../../../style.css"> <!-- Link to your external CSS file -->
+    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        #myBtn:hover {
+            background-color: #555;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <!-- Top News Flash Bar -->
+    <div class="news-flash">
+        <span class="static-text">
+            <p>Tin Nhanh:</p>
+        </span>
+        <div class="scrolling-text" data-text="Nâng cao trách nhiệm toàn xã hội về phòng, chống lãng phí
+        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Đẩy mạnh toàn diện công tác phòng, chống tham nhũng, quyết liệt thực hành tiết kiệm, chống lãng phí &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tập trung tuyên truyền 4 nhóm vấn đề trọng tâm trong Khối các cơ quan Trung ương &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Việt Nam là địa điểm ổn định, hấp dẫn để các nhà đầu tư có thể làm ăn lâu dài" style="font-style: italic; font-weight: 100;font-size: 16px;">
+            Thứ 3, Ngày 1 Tháng 10 Năm 2024
+        </div>
+    </div>
+    
+  
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <div class="logo-head">
+                <a href="../../../../../index.html">
+                    <img src="../../../../../logoDaChieu.jpeg" class="img-logo">
+                </a>
+
+            </div>
+            <hr>
+            <div class="menu">
+                <nav class="nav-container">
+                    <div class="nav-left">
+                        <div class="dropdown">
+                            <button class="dropbtn btn">
+                                <a href="../../../tintuc.html">
+                                    <p>Tin tức</p>
+                                </a>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="../../chinhtri.html" class="btn">Chính trị</a>
+                                <a href="../../../kinhTe/kinhte.html" class="btn">Kinh tế</a>
+                                <a href="../../../xaHoi/xahoi.html" class="btn">Xã Hội</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn btn">
+                                <a href="../../../../vanHoa/vanHoa.html">
+                                    <p>Văn hóa</p>
+                                </a>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="../../../../vanHoa/ngheThuat/ngheThuat.html" class="btn">Nghệ thuật</a>
+                                <a href="../../../../vanHoa/sach/sach.html" class="btn">Sách</a>
+                                <a href="../../../../vanHoa/diSan/diSan.html" class="btn">Di sản</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn btn">
+                                <a href="../../../../duLich/duLich.html">
+                                    <p>Du lịch</p>
+                                </a>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="../../../../duLich/diemDen/diemDen.html" class="btn">Điểm đến</a>
+                                <a href="../../../../duLich/camNang/camNang.html" class="btn">Cẩm nang</a>
+                                <a href="../../../../duLich/amThuc/amThuc.html" class="btn">Ẩm thực</a>
+                            </div>
+                        </div>
+                        <button class="dropbtn btn">
+                            <a href="../../../../congNghe/congNghe.html">
+                                <p>Công Nghệ</p>
+                            </a>
+                        </button>
+                        <div class="dropdown">
+                            <button class="dropbtn btn">
+                                <a href="../../../../thoiTrang/thoiTrang.html">
+                                    <p>Thời trang</p>
+                                </a>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="../../../../thoiTrang/mixAndMatch/mixAndMatch.html" class="btn">Mix and match</a>
+                                <a href="../../../../thoiTrang/lamDep/lamDep.html" class="btn">Làm đẹp</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn btn">
+                                <a href="../../../../amnhac/amNhac.html">
+                                    <p>Âm nhạc</p>
+                                </a>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="../../../../amnhac/hienDai/hienDai.html" class="btn">Hiện đại</a>
+                                <a href="../../../../amnhac/duongDai/duongDai.html" class="btn">Đương đại</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn btn">
+                                <a href="../../../../phimAnh/phimAnh.html">
+                                    <p>Phim Ảnh</p>
+                                </a>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="../../../../phimAnh/dienAnh/dienAnh.html" class="btn">Điện ảnh</a>
+                                <a href="../../../../phimAnh/truyenHinh/truyenHinh.html" class="btn">Truyền hình</a>
+                                <a href="../../../../phimAnh/phimTheoTheLoai/phimTheoTheLoai.html" class="btn">Phim theo thể loại</a>
+                                <a href="../../../../phimAnh/dienVien/dienVien.html" class="btn">Diễn viên</a>
+                                <a href="../../../../phimAnh/hauTruong/hauTruong.html" class="btn">Hậu trường</a>
+                                <a href="../../../../phimAnh/giaiThuong/giaiThuong.html" class="btn">Giải thưởng</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-right">
+
+                        <div class="wrapper">
+                            <img class="search-icon"
+                                src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU2Ljk2NiA1Ni45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2Ljk2NiA1Ni45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMgIHMxMC4zMTgsMjMsMjMsMjNjNC43NjEsMCw5LjI5OC0xLjQzNiwxMy4xNzctNC4xNjJsMTMuNjYxLDE0LjIwOGMwLjU3MSwwLjU5MywxLjMzOSwwLjkyLDIuMTYyLDAuOTIgIGMwLjc3OSwwLDEuNTE4LTAuMjk3LDIuMDc5LTAuODM3QzU2LjI1NSw1NC45ODIsNTYuMjkzLDUzLjA4LDU1LjE0Niw1MS44ODd6IE0yMy45ODQsNmM5LjM3NCwwLDE3LDcuNjI2LDE3LDE3cy03LjYyNiwxNy0xNywxNyAgcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
+                            <input class="search" placeholder="Tìm Kiếm..." type="text">
+                            <img class="clear-icon"
+                                src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjk3NiA1MS45NzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxLjk3NiA1MS45NzY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQuMzczLDcuNjAzYy0xMC4xMzctMTAuMTM3LTI2LjYzMi0xMC4xMzgtMzYuNzcsMGMtMTAuMTM4LDEwLjEzOC0xMC4xMzcsMjYuNjMyLDAsMzYuNzdzMjYuNjMyLDEwLjEzOCwzNi43NywwICAgQzU0LjUxLDM0LjIzNSw1NC41MSwxNy43NCw0NC4zNzMsNy42MDN6IE0zNi4yNDEsMzYuMjQxYy0wLjc4MSwwLjc4MS0yLjA0NywwLjc4MS0yLjgyOCwwbC03LjQyNS03LjQyNWwtNy43NzgsNy43NzggICBjLTAuNzgxLDAuNzgxLTIuMDQ3LDAuNzgxLTIuODI4LDBjLTAuNzgxLTAuNzgxLTAuNzgxLTIuMDQ3LDAtMi44MjhsNy43NzgtNy43NzhsLTcuNDI1LTcuNDI1Yy0wLjc4MS0wLjc4MS0wLjc4MS0yLjA0OCwwLTIuODI4ICAgYzAuNzgxLTAuNzgxLDIuMDQ3LTAuNzgxLDIuODI4LDBsNy40MjUsNy40MjVsNy4wNzEtNy4wNzFjMC43ODEtMC43ODEsMi4wNDctMC43ODEsMi44MjgsMGMwLjc4MSwwLjc4MSwwLjc4MSwyLjA0NywwLDIuODI4ICAgbC03LjA3MSw3LjA3MWw3LjQyNSw3LjQyNUMzNy4wMjIsMzQuMTk0LDM3LjAyMiwzNS40NiwzNi4yNDEsMzYuMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+    </header>
+
+    <!-- Popular Tags -->
+    <!-- Đang trong quá trình phát triển-->
+    <section class="tags">
+        <p>Gợi ý: 
+            <button class="tag" onclick="searchTag('#health')">#Sức khoẻ</button> 
+            <button class="tag" onclick="searchTag('#world')">#Thế giới</button> 
+            <button class="tag" onclick="searchTag('#business')">#Kinh doanh</button> 
+            <button class="tag" onclick="searchTag('#sports')">#Thể thao</button> 
+            <button class="tag" onclick="searchTag('#news')">#Tin tức</button>
+        </p>
+    </section>
+
+
+    <main>
+        <h1 class="headingNews" style="font-size: 25px;opacity: 0.6;width: 100%;text-align: center;padding-top: 20px;">CHÍNH TRỊ</h1>
+        <div class="main-containers">
+            
+            <!-- Updates Section -->
+
+            <!-- Featured Articles Section -->
+            <section class="section1" style="width: 75%;color: black;">
+                <hr style="opacity: 0.2;width: 70%;">
+                <h1 style="text-align: center;">Thứ Năm, ngày 24/10/2024</h1>
+                <hr style="opacity: 0.2;width: 70%;">
+                <div class="day24">
+                    
+                    <h2 class="headingNews1" style="font-size: 35px;font-weight: bold;padding: 30px;padding-top: 1px;text-align: center;">Lữ đoàn 955 Hải quân: Kiểm tra đơn vị vững mạnh toàn diện mẫu mực, tiêu biểu</h2>
+                    <div class="date" style="font-size: 15px;font-weight: bold;font-style: italic;margin-bottom: 20px;text-align: left;text-align: right;margin-right: 60px;color: #4937a6;">
+                        Thứ năm, ngày 24/10/2024 - 16:58
+                    </div>
+                    <img src="24.10.2024_chinhTri_tin3.jpeg" alt="" style="display: block;margin: auto;">
+                    <p class="shortNews" style="font-weight: 900;padding-top: 10px;opacity: 0.8;margin-left: 40px;color: black;margin-right: 40px;">
+                        NDO - Từ ngày 22-24/10, Lữ đoàn 955 Hải quân đã tổ chức 2 đoàn kiểm tra do Thượng tá Mai Trọng Thiêm Phó Lữ đoàn trưởng làm Trưởng đoàn tiến hành kiểm tra việc xây dựng đơn vị vững mạnh toàn diện, “mẫu mực, tiêu biểu” tại các cơ quan, hải đội, tàu trực thuộc.
+                    </p>
+                    
+                    <p class="noiDung" style="padding:70px;text-align: justify;padding-top: 20px;">
+                          &nbsp; &nbsp;&nbsp;&nbsp; Đoàn đã tiến hành kiểm tra 4 tiêu chuẩn xây dựng đơn vị vững mạnh toàn diện “mẫu mực, tiêu biểu”. Việc kiểm tra tập trung vào nội dung: Thực hiện các nhiệm vụ trọng tâm, khâu đột phá đã được xác định; nhận thức của bộ đội về nhiệm vụ và khâu đột phá của các ngành; hành động, thao tác của bộ đội trong các bảng bố trí chiến đấu; xử lý tình huống các của chỉ huy tàu, công tác khắc phục những hạn chế, tồn tại mà Đoàn kiểm tra lần trước đã chỉ ra.
+
+                          Qua kiểm tra cho thấy, các cơ quan, đơn vị đã thực hiện nghiêm các chỉ thị, nghị quyết, mệnh lệnh, hướng dẫn của cấp trên; hoàn thành chỉ tiêu, nhiệm vụ các mặt công tác; duy trì nghiêm nền nếp, chế độ trực sẵn sàng chiến đấu. Hệ thống văn kiện, sổ sách đăng ký thống kê đầy đủ, đúng quy định. Nền nếp công tác giáo dục chính trị, giáo dục truyền thống, quản lý tư tưởng được tiến hành chặt chẽ, nghiêm túc, hiệu quả. Công tác hậu cần, kỹ thuật bảo đảm tốt cho mọi nhiệm vụ; công tác bảo quản, bảo dưỡng trang bị kỹ thuật ngày càng chi tiết và đi vào chiều sâu...
+                          <br><br>
+                          <img src="24.10.2024_baoNhanDan_ludoanhaiquan1.jpeg" alt="" style="display: block;margin: auto;">
+                          <br><br>
+                          Qua 3 ngày kiểm tra, Đoàn kiểm tra đã nhận xét, chấm điểm chi tiết trên từng nội dung tiêu chuẩn. Trưởng đoàn kiểm tra biểu dương, ghi nhận sự đoàn kết, nỗ lực phấn đấu, khắc phục khó khăn của cán bộ, chiến sĩ các tàu, hải đội, hoàn thành tốt nhiệm vụ được giao; đồng thời yêu cầu các đơn vị tiếp thu đầy đủ những hạn chế mà đoàn kiểm tra đã chỉ ra, khẩn trương rà soát triển khai kế hoạch khắc phục để tiếp tục nâng cao hơn nữa chất lượng xây dựng đơn vị vững mạnh toàn diện “mẫu mực, tiêu biểu” thời gian tới; kịp thời nắm bắt, quản lý tình hình tư tưởng bộ đội và xử lý phát sinh, nhất là đối với các đơn vị tàu thường xuyên hoạt động dài ngày trên biển...
+                          <br>
+                          Dịp này, Lữ đoàn 955 cũng tổ chức kiểm tra sĩ quan cuối năm 2024, bao gồm nội dung nhận thức về công tác tham mưu, chính trị, hậu cần-kỹ thuật, điều lệnh đội ngũ tay không nhằm đánh giá trình độ toàn diện, kết quả học tập nghiên cứu, mức độ hoàn thành chức trách nhiệm vụ của đội ngũ sĩ quan; làm cơ sở cho việc chỉ đạo, hướng dẫn nâng cao chất lượng huấn luyện cán bộ trong thời gian tới. Đây cũng là cơ sở cho các ngành quan chức năng đề nghị bổ nhiệm cán bộ vào các vị trí công tác.
+
+                        Một số hình ảnh của đợt kiểm tra về xây dựng đơn vị vững mạnh toàn diện mẫu mực, tiêu biểu tại Lữ đoàn 955 Hải quân:
+                        <br><br>
+                        <img src="24.10.2024_baoNhanDan_ludoanhaiquan2.jpeg" alt="" style="display: block;margin: auto;">
+                        <br><br>
+                        <br><br>
+                        <img src="24.10.2024_baoNhanDan_ludoanhaiquan3.jpeg" alt="" style="display: block;margin: auto;">
+                        <br><br>
+                        <br><br>
+                        <img src="24.10.2024_baoNhanDan_ludoanhaiquan4.jpeg" alt="" style="display: block;margin: auto;">
+                        <br><br>
+                        <br><br>
+                        <img src="24.10.2024_baoNhanDan_ludoanhaiquan5.jpeg" alt="" style="display: block;margin: auto;">
+                        <br><br>
+                    </p>
+                    <p style="text-align: right;margin-right: 70px;">Theo báo Nhân Dân</p>
+                </div>
+               </section>    
+
+
+
+            <!-- Most Read Section -->
+            <section class="section2" style="width: 25%;">
+                <h2>Tin đọc nhiều</h2>
+                <hr class="section">
+                <article style="margin-bottom: 3px;margin-top: 10px;">
+                    <h4 style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">Bắc Bộ chuẩn bị đón đợt rét đầu tiên của mùa đông năm nay</h4>
+                    <snan>Nguồn: Theo Báo VTV.VN</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article style="margin-bottom: 3px;margin-top: 10px;">
+                    <h4 style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">Phó Thủ tướng: Phấn đấu năm 2024, CPI bình quân không vượt quá 4%</h4>
+                    <snan>Nguồn: Theo Báo VTV.VN</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article style="margin-bottom: 3px;margin-top: 10px;">
+                    <h4 style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">NSND Xuân Bắc được bổ nhiệm làm Cục trưởng Cục Nghệ thuật biểu diễn</h4>
+                    <snan>Nguồn: Theo Báo VTV.VN</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article style="margin-bottom: 3px;margin-top: 10px;">
+                    <h4 style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">Bão nhiệt đới Kong-rey mạnh lên thành siêu bão</h4>
+                    <snan>Nguồn: Theo Báo VTV.VN</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article style="margin-bottom: 3px;margin-top: 10px;">
+                    <h4 style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">Đẩy mạnh toàn diện công tác phòng, chống tham nhũng, quyết liệt thực hành tiết kiệm, chống lãng phí</h4>
+                    <snan>Nguồn: Theo Báo Nhân Dân</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article style="margin-bottom: 3px;margin-top: 10px;">
+                    <h4 style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">Tập đoàn năng lượng Arab Saudi sẵn sàng đầu tư 5 tỷ USD vào Việt Nam</h4>
+                    <snan>Nguồn: Theo Báo VnExpress</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article style="margin-bottom: 3px;margin-top: 10px;">
+                    <h4 style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">Nhà sáng lập ByteDance giàu nhất Trung Quốc</h4>
+                    <snan>Nguồn: Theo Báo VnExpress</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article style="margin-bottom: 3px;margin-top: 10px;">
+                    <h4 style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">Phó thủ tướng: Sẽ thu thuế VAT với hàng dưới 1 triệu đồng qua Shopee, Temu</h4>
+                    <snan>Nguồn: Theo Báo VnExpress</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article style="margin-bottom: 3px;margin-top: 10px;">
+                    <h4 style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">Các cơ quan Nội chính Trung ương nâng cao chất lượng phối hợp, "hiệp đồng tác chiến" chặt chẽ, hiệu quả</h4>
+                    <snan>Nguồn: Theo Báo Nhân Dân</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article style="margin-bottom: 3px;margin-top: 10px;">
+                    <h4 style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">Công bố các Nghị quyết của Ủy ban Thường vụ Quốc hội khóa XV</h4>
+                    <snan>Nguồn: Theo Báo Nhân Dân</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+            </section>
+        </div>
+
+        <!-- Popular Stories Section -->
+        <section class="popular-stories">
+            <h2>Xem Thêm</h2>
+            <hr class="section" style="margin-bottom: 25px;">
+            <div class="popular-grid" style="display: flex;flex-direction: row;align-items: justify;justify-content: space-between;">
+                <article style="max-width: 18%;margin-left: 25px;">
+                    <img src="../../../../../xemThem_anh1.jpeg" alt="Story Image" style="max-height: 150px;max-width: 300px;">
+                    <h3 style="margin-top: 10px;margin-bottom: 10px;text-align: justify;justify-content: center;">Chân trời vô tận: Đầu tư ngày hôm nay, định hướng cho ngày mai</h3>
+                    <span>Nguồn: Theo Báo Nhân Dân</span>
+                </article>
+                <hr style="width: 0.1px; margin-left: -150px; margin-right: -150px;border: #7cc8fc; opacity: 0.3;">
+                <article style="max-width: 18%;">
+                    <img src="../../../../../xemThem_anh2.jpeg" alt="Story Image" style="max-height: 150px;max-width: 300px;">
+                    <h3 style="margin-top: 10px;margin-bottom: 10px;text-align: justify;justify-content: center;">Tăng tốc xây dựng cơ sở dữ liệu, quản trị số tại các bộ, ngành</h3>
+                    <span>Nguồn: Theo Báo Nhân Dân</span>
+                </article>
+                <hr style="width: 0.1px; margin-left: -150px; margin-right: -150px;border: #7cc8fc;opacity: 0.3;;">
+                <article style="max-width: 20%;">
+                    <img src="../../../../../xemThem_anh3.jpeg" alt="Story Image" style="max-height: 150px;max-width: 300px;">
+                    <h3 style="margin-top: 10px;margin-bottom: 10px;text-align: justify;justify-content: center;">Nâng cao năng lực sáng tạo cho đoàn viên, thanh niên BIDV</h3>
+                    <span>Nguồn: Theo Báo<br> dangcongsan.vn</span>
+                </article>
+                <hr style="width: 0.1px; margin-left: -150px; margin-right: -150px;border: #7cc8fc;opacity: 0.3;;">
+                <article style="max-width: 20%;margin-right: 20px;">
+                    <img src="../../../../../xemThem_anh4.jpeg" alt="Story Image" style="max-width: 300px;max-height: 150px;">
+                    <h3 style="margin-top: 10px;margin-bottom:10px;text-align: justify;justify-content: center ;">Vùng 4 Hải quân đưa ngư dân bị bệnh trên biển về đất liền điều trị</h3>
+                    <span>Nguồn: Theo Báo<br> dangcongsan.vn</span>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <ul>
+            <li>Trang thông tin điện tử Đa Chiều</li>
+            <li>Trụ sở chính: 36 Xuân Thủy, Cầu Giấy, Hà Nội</li>
+            <li>Tel: +(84)12 3456.</li>
+            <li>E-mail: dachieu@gmail.com</li>
+        </ul>
+    </footer>
+
+    <script src="../../../../../javaScript.js"></script>
+</body>
+
+</html>
