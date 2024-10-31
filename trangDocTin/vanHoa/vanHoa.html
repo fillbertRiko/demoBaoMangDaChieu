@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine Plus</title>
+    <link rel="stylesheet" href="../../style.css"> <!-- Link to your external CSS file -->
+    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        #myBtn:hover {
+            background-color: #555;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <!-- Top News Flash Bar -->
+    <div class="news-flash">
+        <span class="static-text">
+            <p>Tin Nhanh:</p>
+        </span>
+        <div class="scrolling-text" data-text="Nâng cao trách nhiệm toàn xã hội về phòng, chống lãng phí
+        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Đẩy mạnh toàn diện công tác phòng, chống tham nhũng, quyết liệt thực hành tiết kiệm, chống lãng phí &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tập trung tuyên truyền 4 nhóm vấn đề trọng tâm trong Khối các cơ quan Trung ương &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Việt Nam là địa điểm ổn định, hấp dẫn để các nhà đầu tư có thể làm ăn lâu dài" style="font-style: italic; font-weight: 100;font-size: 16px;">
+            Thứ 3, Ngày 1 Tháng 10 Năm 2024
+        </div>
+    </div>
+    
+  
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <div class="logo-head">
+                <a href="../../index.html">
+                    <img src="../../logoDaChieu.jpeg" class="img-logo">
+                </a>
+
+            </div>
+            <hr>
+            <div class="menu">
+                <nav class="nav-container">
+                    <div class="nav-left">
+                        <div class="dropdown">
+                            <button class="dropbtn btn">
+                                <a href="../tinTuc/tintuc.html">
+                                    <p>Tin tức</p>
+                                </a>
+                            </button>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="../tinTuc/chinhTri/chinhtri.html" class="btn">Chính trị</a>
+                                <a href="../tinTuc/kinhTe/kinhte.html" class="btn">Kinh tế</a>
+                                <a href="../tinTuc/xaHoi/xahoi.html" class="btn">Xã Hội</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn btn">
+                                <a href="../vanHoa/vanHoa.html">
+                                    <p>Văn hóa</p>
+                                </a>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="../vanHoa/ngheThuat/ngheThuat.html" class="btn">Nghệ thuật</a>
+                                <a href="../vanHoa/sach/sach.html" class="btn">Sách</a>
+                                <a href="../vanHoa/diSan/diSan.html" class="btn">Di sản</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn btn">
+                                <a href="../duLich/duLich.html">
+                                    <p>Du lịch</p>
+                                </a>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="../duLich/diemDen/diemDen.html" class="btn">Điểm đến</a>
+                                <a href="../duLich/camNang/camNang.html" class="btn">Cẩm nang</a>
+                                <a href="../duLich/amThuc/amThuc.html" class="btn">Ẩm thực</a>
+                            </div>
+                        </div>
+                        <button class="dropbtn btn">
+                            <a href="../congNghe/congNghe.html">
+                                <p>Công nghệ</p>
+                            </a>
+                        </button>
+                        <div class="dropdown">
+                            <button class="dropbtn btn">
+                                <a href="../thoiTrang/thoiTrang.html">
+                                    <p>Thời trang</p>
+                                </a>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="../thoiTrang/mixAndMatch/mixAndMatch.html" class="btn">Mix and match</a>
+                                <a href="../thoiTrang/lamDep/lamDep.html" class="btn">Làm đẹp</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn btn">
+                                <a href="../amnhac/amNhac.html">
+                                    <p>Âm nhạc</p>
+                                </a>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="../amnhac/hienDai/hienDai.html" class="btn">Hiện đại</a>
+                                <a href="../amnhac/duongDai/duongDai.html" class="btn">Đương đại</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn btn">
+                                <a href="../phimAnh/phimAnh.html">
+                                    <p>Phim ảnh</p>
+                                </a>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="../phimAnh/dienAnh/dienAnh.html" class="btn">Điện ảnh</a>
+                                <a href="../phimAnh/truyenHinh/truyenHinh.html" class="btn">Truyền hình</a>
+                                <a href="../phimAnh/phimTheoTheLoai/phimTheoTheLoai.html" class="btn">Phim theo thể loại</a>
+                                <a href="../phimAnh/dienVien/dienVien.html" class="btn">Diễn viên</a>
+                                <a href="../phimAnh/hauTruong/hauTruong.html" class="btn">Hậu trường</a>
+                                <a href="../phimAnh/giaiThuong/giaiThuong.html" class="btn">Giải thưởng</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-right">
+
+                        <div class="wrapper">
+                            <img class="search-icon"
+                                src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU2Ljk2NiA1Ni45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2Ljk2NiA1Ni45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMgIHMxMC4zMTgsMjMsMjMsMjNjNC43NjEsMCw5LjI5OC0xLjQzNiwxMy4xNzctNC4xNjJsMTMuNjYxLDE0LjIwOGMwLjU3MSwwLjU5MywxLjMzOSwwLjkyLDIuMTYyLDAuOTIgIGMwLjc3OSwwLDEuNTE4LTAuMjk3LDIuMDc5LTAuODM3QzU2LjI1NSw1NC45ODIsNTYuMjkzLDUzLjA4LDU1LjE0Niw1MS44ODd6IE0yMy45ODQsNmM5LjM3NCwwLDE3LDcuNjI2LDE3LDE3cy03LjYyNiwxNy0xNywxNyAgcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
+                            <input class="search" placeholder="Tìm Kiếm..." type="text">
+                            <img class="clear-icon"
+                                src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjk3NiA1MS45NzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxLjk3NiA1MS45NzY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQuMzczLDcuNjAzYy0xMC4xMzctMTAuMTM3LTI2LjYzMi0xMC4xMzgtMzYuNzcsMGMtMTAuMTM4LDEwLjEzOC0xMC4xMzcsMjYuNjMyLDAsMzYuNzdzMjYuNjMyLDEwLjEzOCwzNi43NywwICAgQzU0LjUxLDM0LjIzNSw1NC41MSwxNy43NCw0NC4zNzMsNy42MDN6IE0zNi4yNDEsMzYuMjQxYy0wLjc4MSwwLjc4MS0yLjA0NywwLjc4MS0yLjgyOCwwbC03LjQyNS03LjQyNWwtNy43NzgsNy43NzggICBjLTAuNzgxLDAuNzgxLTIuMDQ3LDAuNzgxLTIuODI4LDBjLTAuNzgxLTAuNzgxLTAuNzgxLTIuMDQ3LDAtMi44MjhsNy43NzgtNy43NzhsLTcuNDI1LTcuNDI1Yy0wLjc4MS0wLjc4MS0wLjc4MS0yLjA0OCwwLTIuODI4ICAgYzAuNzgxLTAuNzgxLDIuMDQ3LTAuNzgxLDIuODI4LDBsNy40MjUsNy40MjVsNy4wNzEtNy4wNzFjMC43ODEtMC43ODEsMi4wNDctMC43ODEsMi44MjgsMGMwLjc4MSwwLjc4MSwwLjc4MSwyLjA0NywwLDIuODI4ICAgbC03LjA3MSw3LjA3MWw3LjQyNSw3LjQyNUMzNy4wMjIsMzQuMTk0LDM3LjAyMiwzNS40NiwzNi4yNDEsMzYuMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+    </header>
+
+    <!-- Popular Tags -->
+    <!-- Đang trong quá trình phát triển-->
+    <section class="tags">
+        <p>Gợi ý: 
+            <button class="tag" onclick="searchTag('#health')">#Sức khoẻ</button> 
+            <button class="tag" onclick="searchTag('#world')">#Thế giới</button> 
+            <button class="tag" onclick="searchTag('#business')">#Kinh doanh</button> 
+            <button class="tag" onclick="searchTag('#sports')">#Thể thao</button> 
+            <button class="tag" onclick="searchTag('#news')">#Tin tức</button>
+        </p>
+    </section>
+
+
+    <main>
+        <h1 class="headingNews" style="font-size: 25px;opacity: 0.6;width: 100%;text-align: center;padding-top: 20px;">VĂN HOÁ</h1>
+        <div class="main-containers">
+            
+            <!-- Updates Section -->
+
+            <section class="section1" style="margin-left: 20px;width: 75%;height: fit-content;">
+                <h2 style="font-size: 42px;margin-top: 0;margin-bottom: -5px;">Nổi bật</h2>
+                <hr class="section">
+
+                <!--Ngay 27/10/2024-->
+                <hr style="opacity: 0.2;width: 70%;">
+                <h1 style="text-align: center;">Chủ Nhật, ngày 27/10/2024</h1>
+                <hr style="opacity: 0.2;width: 70%;">
+
+                <!--chinhtri-->
+                <article class="main-article">
+                    <a href="../tinTuc/chinhTri/27.10.2024/tin1/27.10.2024_chinhTri_tin1.html">
+                        <img src="../tinTuc/chinhTri/27.10.2024/tin1/27.10.2024_chinhTri_tin1.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Thủ tướng Phạm Minh Chính và Phu nhân bắt đầu thăm chính thức UAE</h3>
+                    </a>
+                    <p><span>Nguồn: </span> <span>Theo Báo <a href="https://vtv.vn/" style="color: black;">VTV.VN</a></span></p>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article class="main-article">
+                    <a href="../tinTuc/chinhTri/27.10.2024/tin2/27.10.2024_chinhTri_tin2.html">
+                        <img src="../tinTuc/chinhTri/27.10.2024/tin2/27.10.2024_chinhTri_tin2.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Phó Thủ tướng Trần Hồng Hà chỉ đạo công tác ứng phó với bão số 6</h3>
+                    </a>
+                    <p><span>Nguồn: </span> <span>Theo Báo <a href="https://vtv.vn/" style="color: black;">VTV.VN</a></span></p>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article class="main-article">
+                    <a href="../tinTuc/chinhTri/27.10.2024/tin3/27.10.2024_chinhTri_tin3.html">
+                        <img src="../tinTuc/chinhTri/27.10.2024/tin3/27.10.2024_chinhTri_tin3a.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Tiễn đoàn công tác Cảnh sát biển Việt Nam đi thăm và làm việc tại Hàn Quốc</h3>
+                    </a>
+                    <p><span>Nguồn: </span> <span>Theo Báo <a href="https://nhandan.vn/" style="color: black;">Nhân Dân</a></span></p>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article class="main-article">
+                    <a href="../tinTuc/chinhTri/27.10.2024/tin4/27.10.2024_chinhTri_tin4.html">
+                        <img src="../tinTuc/chinhTri/27.10.2024/tin4/27.10.2024_chinhTri_tin4a.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Thúc đẩy công bằng khí hậu thông qua cách tiếp cận pháp quyền</h3>
+                    </a>
+                    <p><span>Nguồn: </span> <span>Theo Báo <a href="https://nhandan.vn/" style="color: black;">Nhân Dân</a></span></p>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+
+                <!--kinhte-->
+                <article class="main-article">
+                    <a href="">
+                        <img src="/27.10.2024_baoVTVOnline_kinhTe_tin1b.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Vietjet khai trương đường bay Daegu – Nha Trang, nối gần hơn hai thiên đường du lịch Việt - Hàn</h3>
+                    </a>
+                    <p><span>Nguồn: </span> <span>Theo Báo <a href="https://vtv.vn/" style="color: black;">VTV.VN</a></span></p>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+
+                <!--xahoi-->
+                <article class="main-article">
+                    <a href="">
+                        <img src="/27.10.2024_baoVTVOnline_xaHoi_tin1a.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Đà Nẵng mưa to, gió lớn, cây xanh ngã đổ do bão số 6</h3>  
+                    </a>
+                    <p><span>Nguồn: </span> <span>Theo Báo <a href="https://vtv.vn/" style="color: black;">VTV.VN</a></span></p>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+
+                <!--Ngay 26/10/2024-->
+                <hr style="opacity: 0.2;width: 70%;">
+                <h1 style="text-align: center;">Thứ Bảy, ngày 26/10/2024</h1>
+                <hr style="opacity: 0.2;width: 70%;">
+
+                <!--chinhtri-->
+                <article class="main-article">
+                    <a href="../tinTuc/chinhTri/26.10.2024/tin1/26.10.2024_chinhTri_tin1.html">
+                        <img src="../tinTuc/chinhTri/26.10.2024/tin1/26.10.2024_chinhTri_tin1a.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Ngày 26/10, Quốc hội thảo luận ở tổ về tình hình kinh tế - xã hội</h3>
+                        <p><span>Nguồn: </span> <span>Theo Báo <a href="https://vtv.vn/" style="color: black;">VTV.VN</a></span></p>
+                    </a>
+                    
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article class="main-article">
+                    <a href="../tinTuc/chinhTri/26.10.2024/tin2/26.10.2024_chinhTri_tin2.html">
+                        <img src="../tinTuc/chinhTri/26.10.2024/tin2/26.10.2024_chinhTri_tin2a.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Ông Thái Thanh Quý giữ chức Phó Trưởng Ban Kinh tế Trung ương</h3>
+                        <p><span>Nguồn: </span> <span>Theo Báo <a href="https://vtv.vn/" style="color: black;">VTV.VN</a></span></p>
+                    </a>
+                    
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article class="main-article">
+                    <a href="../tinTuc/chinhTri/26.10.2024/tin3/26.10.2024_chinhTri_tin3.html">
+                        
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Thủ tướng Phạm Minh Chính sẽ thăm UAE, Qatar và Saudi Arabia</h3>
+                        <p><span>Nguồn: </span> <span>Theo Báo <a href="https://vtv.vn/" style="color: black;">VTV.VN</a></span></p>
+                    </a>
+                    
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+
+                <!--kinhte-->
+                <article class="main-article">
+                    <a href="../tinTuc/kinhTe/26.10.2024/tin1/26.10.2024_kinhTe_tin1.html">
+                        <img src="../tinTuc/kinhTe/26.10.2024/tin1/26.10.2024_kinhTe_tin1.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Chương trình "Vinh quang trí tuệ bàn tay vàng – Tự hào thương hiệu Việt Nam”</h3>
+                        </a>
+                        <p><span>Nguồn: </span> <span>Theo Báo <a href="https://nhandan.vn/" style="color: black;">Nhân Dân</a></span></p>
+                    
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article class="main-article">
+                    <a href="../tinTuc/kinhTe/26.10.2024/tin2/26.10.2024_kinhTe_tin2.html">
+                        <img src="../tinTuc/kinhTe/26.10.2024/tin2/26.10.2024_kinhTe_tin2a.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Yêu cầu thu thuế ngay với sàn thương mại điện tử Temu</h3>
+                        </a>
+                        <p><span>Nguồn: </span> <span>Theo Báo <a href="https://nhandan.vn/" style="color: black;">Nhân Dân</a></span></p>
+                    
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article class="main-article">
+                    <a href="../tinTuc/kinhTe/26.10.2024/tin3/26.10.2024_kinhTe_tin3.html">
+                        <img src="../tinTuc/kinhTe/26.10.2024/tin3/26.10.2024_kinhTe_tin3a.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Gỡ “điểm nghẽn” tài chính cho các dự án BOT giao thông</h3>
+                        </a>
+                        <p><span>Nguồn: </span> <span>Theo Báo <a href="https://nhandan.vn/" style="color: black;">Nhân Dân</a></span></p>
+                    
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+
+                <!--xahoi-->
+                <article class="main-article">
+                    <img src="/26.10.2024_baoNhanDan_xaHoi_tin3a.jpeg" alt="Main Image">
+                    <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Chủ bến, chủ phương tiện đường thủy phải neo đậu phương tiện an toàn trong thời gian bão đổ bộ</h3>
+                    <p><span>Nguồn: </span> <span>Theo Báo Nhân Dân</span></p>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+
+                <!--Ngay 25/10/2024-->
+                <hr style="opacity: 0.2;width: 70%;">
+                <h1 style="text-align: center;">Thứ Sáu, ngày 25/10/2024</h1>
+                <hr style="opacity: 0.2;width: 70%;">
+
+                <!--xahoi-->
+                <article class="main-article">
+                    <a href="../tinTuc/xaHoi/24.10.2024/tin2/24.10.2024_xaHoi_tin2.html">
+
+                    </a>
+                    <img src="../tinTuc/xaHoi/24.10.2024/tin2/" alt="Main Image">
+                    <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Bộ đội Biên phòng tỉnh Quảng Bình hỗ trợ người dân ứng phó bão số 6</h3>
+                    <p><span>Nguồn: </span> <span>Theo Báo <a href="https://vtv.vn/" style="color: black;">VTV.VN</a></span></p>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+
+                <!--kinhTe-->
+                <article class="main-article">
+                    <a href="../tinTuc/kinhTe/25.10.2024/tin3/25.10.2024_kinhTe_tin3.html">
+                        <img src="../tinTuc/kinhTe/25.10.2024/tin3/25.10.2024_kinhTe_tin3.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Động lực tăng trưởng từ sản xuất công nghiệp</h3>
+                        </a>
+                        <p><span>Nguồn: </span> <span>Theo Báo <a href="https://nhandan.vn/" style="color: black;">Nhân Dân</a></span></p>
+                    
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article class="main-article">
+                    <a href="../tinTuc/kinhTe/25.10.2024/tin2/25.10.2024_kinhTe_tin2.html">
+                        <img src="../tinTuc/kinhTe/25.10.2024/tin2/25.10.2024_kinhTe_tin2.JPEG" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Nga trở thành nền kinh tế lớn thứ 4 thế giới</h3>
+                        </a>
+                        <p><span>Nguồn: </span> <span>Theo Báo <a href="https://vtv.vn/" style="color: black;">VTV.VN</a></span></p>
+                    
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+
+                <article class="main-article">
+                    <a href="../tinTuc/kinhTe/25.10.2024/tin1/25.10.2024_kinhTe_tin1.html">
+                        <img src="../tinTuc/kinhTe/25.10.2024/tin1/25.10.2024_kinhTe_tin1.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Ấn Độ bỏ giá sàn, gạo Việt bị tác động ra sao?</h3>
+                        </a>
+                        <p><span>Nguồn: </span> <span>Theo Báo <a href="https://thanhnien.vn/" style="color: black;">Thanh Niên</a></span></p>
+                    
+                    
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+
+                <!--chinhTri-->
+                <article class="main-article">
+                    <a href="../tinTuc/chinhTri/25.10.2024/tin1/25.10.2024_chinhTri_tin1.html">
+                        <img src="../tinTuc/chinhTri/25.10.2024/tin1/25.10.2024_chinhTri_tin1.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Hội nghị các Nhà lãnh đạo Nhóm BRICS mở rộng: Cùng kiến tạo một thế giới tốt đẹp hơn</h3>
+                        <p><span>Nguồn: </span> <span>Theo Báo <a href="https://nhandan.vn/" style="color: black;">Nhân Dân</a></span></p>
+                    </a>
+                    
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article class="main-article">
+                    <a href="../tinTuc/chinhTri/25.10.2024/tin2/25.10.2024_chinhTri_tin2.html">
+                        <img src="../tinTuc/chinhTri/25.10.2024/tin2/25.10.2024_baoVTVOnline_chinhTri_tin1b.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Thủ tướng Phạm Minh Chính hội đàm với Tổng thống Nga Vladimir Putin</h3>
+                        <p><span>Nguồn: </span> <span>Theo Báo <a href="https://vtv.vn/" style="color: black;">VTV.VN</a></span></p>
+                    </a>
+                    
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article class="main-article">
+                    <a href="../tinTuc/chinhTri/25.10.2024/tin3/25.10.2024_chinhTri_tin3.html">
+                        <img src="../tinTuc/chinhTri/25.10.2024/tin3/25.10.2024_baoVTVOnline_chinhTri_tin3a.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Khẳng định vị thế Việt Nam trên đà vươn lên</h3>
+                        <p><span>Nguồn: </span> <span>Theo Báo <a href="https://thanhnien.vn/" style="color: black;">Thanh Niên</a></span></p>
+                    </a>
+                    
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article class="main-article">
+                    <a href="../tinTuc/chinhTri/25.10.2024/tin4/25.10.2024_chinhTri_tin4.html">
+                        <img src="../tinTuc/chinhTri/25.10.2024/tin4/25.10.2024_baoVTVOnline_chinhTri_tin4a.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Tin tức sáng 25-10: Hôm nay, Quốc hội xem xét, quyết định công tác nhân sự</h3>
+                        <p><span>Nguồn: </span> <span>Theo Báo <a href="https://tuoitre.vn/" style="color: black;">Tuổi Trẻ</a></span></p>
+                    </a>
+                    
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+
+                <!--Ngay 24/10/2024-->
+                <!--Duoc 3 tin moi loai 1 tin-->
+                <hr style="opacity: 0.2;width: 70%;">
+                <h1 style="text-align: center;">Thứ Năm, ngày 24/10/2024</h1>
+                <hr style="opacity: 0.2;width: 70%;">
+
+                <!--ngheThuat-->
+                <article class="main-article">
+                    <a href="../vanHoa/ngheThuat/24.10.2024/tin1/24.10.2024_ngheThuat_tin1.html">
+                        <img src="../vanHoa/ngheThuat/24.10.2024/tin1/24.10.2024_ngheThuat_tin1a.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Phát động giải ảnh báo chí Khoảnh khắc vàng</h3>
+                        <p><span>Nguồn: </span> <span>Theo Báo <a href="https://nhandan.vn/" style="color: black;">Nhân Dân</a></span></p>
+                    </a>
+                    
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article class="main-article">
+                    <a href="../tinTuc/xaHoi/24.10.2024/tin2/24.10.2024_xaHoi_tin2.html">
+                        <img src="../tinTuc/xaHoi/24.10.2024/tin2/24.10.2024_xaHoi_tin2.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Tăng cường kiểm tra, chấn chỉnh công tác kiểm định xe cơ giới, phòng chống tiêu cực</h3>
+                        <p><span>Nguồn: </span> <span>Theo Báo <a href="https://nhandan.vn/" style="color: black;">Nhân Dân</a></span></p>
+                    </a>
+                    
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+
+                <!--sach-->
+                <article class="main-article">
+                    <a href="../tinTuc/kinhTe/24.10.2024/tin1/24.10.2024_kinhTe_tin1.html">
+                        <img src="../tinTuc/kinhTe/24.10.2024/tin1/24.10.2024_baoThanhNien_KinhTe.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Giá xăng tiếp tục giảm thêm từ 38 - 68 đồng/lít. Trong nhóm sản phẩm dầu, giá dầu giảm sâu nhất là 264 đồng/lít, giá dầu mazut tăng 139 đồng/kg.</h3>
+                        <p><span>Nguồn: </span> <span>Theo Báo <a href="https://thanhnien.vn/" style="color: black;">Thanh Niên</a></span></p>
+                    </a>
+                    
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article class="main-article">
+                    <a href="../tinTuc/kinhTe/24.10.2024/tin2/24.10.2024_kinhTe_tin2.html">
+                        <img src="../tinTuc/kinhTe/24.10.2024/tin2/24.10.2024_kinhTe_tin2.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Đà Nẵng: Hỗ trợ hơn 2,2 tỷ đồng cho doanh nghiệp đổi mới máy móc, sản xuất sạch hơn</h3>
+                        <p><span>Nguồn: </span> <span>Theo Báo <a href="https://nhandan.vn/" style="color: black;">Nhân Dân</a></span></p>
+                    </a>
+                    
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article class="main-article">
+                    <a href="../tinTuc/kinhTe/24.10.2024/tin3/24.10.2024_kinhTe_tin3.html">
+                        <img src="../tinTuc/kinhTe/24.10.2024/tin3/24.10.2024_kinhTe_tin3c.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Thời điểm chín muồi để xây dựng đường sắt tốc độ cao Bắc - Nam</h3>
+                        <p><span>Nguồn: </span> <span>Theo Báo <a href="https://vtv.vn/" style="color: black;">VTV.VN</a></span></p>
+                    </a>
+                    
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+
+                <!--diSan-->
+                <article class="main-article">
+                    <a href="../tinTuc/chinhTri/24.10.2024/tin1/24.10.2024_chinhTri_tin1.html">
+                        <img src="../tinTuc/chinhTri/24.10.2024/tin1/VTV_24.10.2024.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Thủ tướng Phạm Minh Chính gặp Tổng Bí thư, Chủ tịch Trung Quốc Tập Cận Bình</h3>
+                    </a>
+                    <p><span>Nguồn: </span> <span>Theo Báo <a href="https://vtv.vn/" style="color: black;">VTV.VN</a></span></p>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article class="main-article">
+                    <a href="../tinTuc/chinhTri/24.10.2024/tin2/24.10.2024_chinhTri_tin2.html">
+                        <img src="../tinTuc/chinhTri/24.10.2024/tin2/24.10.2024_chinhTri_tin2.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Sớm nâng tầm quan hệ Việt Nam - Thổ Nhĩ Kỳ</h3>
+                    </a>
+                    <p><span>Nguồn: </span> <span>Theo Báo <a href="https://vtv.vn/" style="color: black;">VTV.VN</a></span></p>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article class="main-article">
+                    <a href="../tinTuc/chinhTri/24.10.2024/tin3/24.10.2024_chinhTri_tin3.html">
+                        <img src="../tinTuc/chinhTri/24.10.2024/tin3/24.10.2024_chinhTri_tin3.jpeg" alt="Main Image">
+                        <h3 style="font-size: 23px; text-align:justify;justify-content: center;">Lữ đoàn 955 Hải quân: Kiểm tra đơn vị vững mạnh toàn diện mẫu mực, tiêu biểu</h3>
+                    </a>
+                    <p><span>Nguồn: </span> <span>Theo Báo <a href="https://nhandan.vn/" style="color: black;">Nhân Dân</a></span></p>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                
+            </section>
+
+
+
+            <!-- Most Read Section -->
+            <section class="section2" style="width: 25%;">
+                <h2>Tin đọc nhiều</h2>
+                <hr class="section">
+                <article style="margin-bottom: 3px;margin-top: 10px;">
+                    <h4 style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">Bắc Bộ chuẩn bị đón đợt rét đầu tiên của mùa đông năm nay</h4>
+                    <snan>Nguồn: Theo Báo VTV.VN</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article style="margin-bottom: 3px;margin-top: 10px;">
+                    <h4 style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">Phó Thủ tướng: Phấn đấu năm 2024, CPI bình quân không vượt quá 4%</h4>
+                    <snan>Nguồn: Theo Báo VTV.VN</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article style="margin-bottom: 3px;margin-top: 10px;">
+                    <h4 style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">NSND Xuân Bắc được bổ nhiệm làm Cục trưởng Cục Nghệ thuật biểu diễn</h4>
+                    <snan>Nguồn: Theo Báo VTV.VN</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article style="margin-bottom: 3px;margin-top: 10px;">
+                    <h4 style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">Bão nhiệt đới Kong-rey mạnh lên thành siêu bão</h4>
+                    <snan>Nguồn: Theo Báo VTV.VN</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article style="margin-bottom: 3px;margin-top: 10px;">
+                    <h4 style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">Đẩy mạnh toàn diện công tác phòng, chống tham nhũng, quyết liệt thực hành tiết kiệm, chống lãng phí</h4>
+                    <snan>Nguồn: Theo Báo Nhân Dân</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article style="margin-bottom: 3px;margin-top: 10px;">
+                    <h4 style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">Tập đoàn năng lượng Arab Saudi sẵn sàng đầu tư 5 tỷ USD vào Việt Nam</h4>
+                    <snan>Nguồn: Theo Báo VnExpress</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article style="margin-bottom: 3px;margin-top: 10px;">
+                    <h4 style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">Nhà sáng lập ByteDance giàu nhất Trung Quốc</h4>
+                    <snan>Nguồn: Theo Báo VnExpress</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article style="margin-bottom: 3px;margin-top: 10px;">
+                    <h4 style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">Phó thủ tướng: Sẽ thu thuế VAT với hàng dưới 1 triệu đồng qua Shopee, Temu</h4>
+                    <snan>Nguồn: Theo Báo VnExpress</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article style="margin-bottom: 3px;margin-top: 10px;">
+                    <h4 style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">Các cơ quan Nội chính Trung ương nâng cao chất lượng phối hợp, "hiệp đồng tác chiến" chặt chẽ, hiệu quả</h4>
+                    <snan>Nguồn: Theo Báo Nhân Dân</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article style="margin-bottom: 3px;margin-top: 10px;">
+                    <h4 style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">Công bố các Nghị quyết của Ủy ban Thường vụ Quốc hội khóa XV</h4>
+                    <snan>Nguồn: Theo Báo Nhân Dân</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article style="margin-bottom: 3px;margin-top: 10px;">
+                    <h4 style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">Cảnh cáo một Chủ tịch xã uống rượu, bia trong giờ làm việc và có hành vi thiếu chuẩn mực</h4>
+                    <snan>Nguồn: Theo Báo Nhân Dân</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article style="margin-bottom: 3px;margin-top: 10px;">
+                    <h4 style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">Man Utd đã tìm được người thay thế HLV Ten Hag</h4>
+                    <snan>Nguồn: Theo Báo VTV.VN</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article style="margin-bottom: 3px;margin-top: 10px;">
+                    <h4 style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">Tổng Bí thư, Chủ tịch nước Tô Lâm thăm Trường liên cấp mang tên Chủ tịch Hồ Chí Minh</h4>
+                    <snan>Nguồn: Theo Báo Nhân Dân</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+                <article>
+                    <h4 style="font-size: 18px;text-align: justify;justify-content: center;margin-bottom: 11px;margin-top: 10px;">Tổng Bí thư Chủ tịch nước Tô Lâm thăm và làm việc với Tổng cục II, Bộ Quốc phòng</h4>
+                    <span>Nguồn: Theo Báo Nhân Dân</span>
+                </article>
+                <hr style="border: 1px solid #7cc8fc;width: 80%;opacity: 0.5;">
+            </section>
+        </div>
+
+        <!-- Popular Stories Section -->
+        <section class="popular-stories">
+            <h2>Xem Thêm</h2>
+            <hr class="section" style="margin-bottom: 25px;">
+            <div class="popular-grid" style="display: flex;flex-direction: row;align-items: justify;justify-content: space-between;">
+                <article style="max-width: 18%;margin-left: 25px;">
+                    <img src="../../xemThem_anh1.jpeg" alt="Story Image" style="max-height: 150px;max-width: 300px;">
+                    <h3 style="margin-top: 10px;margin-bottom: 10px;text-align: justify;justify-content: center;">Chân trời vô tận: Đầu tư ngày hôm nay, định hướng cho ngày mai</h3>
+                    <span>Nguồn: Theo Báo Nhân Dân</span>
+                </article>
+                <hr style="width: 0.1px; margin-left: -150px; margin-right: -150px;border: #7cc8fc; opacity: 0.3;">
+                <article style="max-width: 18%;">
+                    <img src="../../xemThem_anh2.jpeg" alt="Story Image" style="max-height: 150px;max-width: 300px;">
+                    <h3 style="margin-top: 10px;margin-bottom: 10px;text-align: justify;justify-content: center;">Tăng tốc xây dựng cơ sở dữ liệu, quản trị số tại các bộ, ngành</h3>
+                    <span>Nguồn: Theo Báo Nhân Dân</span>
+                </article>
+                <hr style="width: 0.1px; margin-left: -150px; margin-right: -150px;border: #7cc8fc;opacity: 0.3;;">
+                <article style="max-width: 20%;">
+                    <img src="../../xemThem_anh3.jpeg" alt="Story Image" style="max-height: 150px;max-width: 300px;">
+                    <h3 style="margin-top: 10px;margin-bottom: 10px;text-align: justify;justify-content: center;">Nâng cao năng lực sáng tạo cho đoàn viên, thanh niên BIDV</h3>
+                    <span>Nguồn: Theo Báo<br> dangcongsan.vn</span>
+                </article>
+                <hr style="width: 0.1px; margin-left: -150px; margin-right: -150px;border: #7cc8fc;opacity: 0.3;;">
+                <article style="max-width: 20%;margin-right: 20px;">
+                    <img src="../../xemThem_anh4.jpeg" alt="Story Image" style="max-width: 300px;max-height: 150px;">
+                    <h3 style="margin-top: 10px;margin-bottom:10px;text-align: justify;justify-content: center ;">Vùng 4 Hải quân đưa ngư dân bị bệnh trên biển về đất liền điều trị</h3>
+                    <span>Nguồn: Theo Báo<br> dangcongsan.vn</span>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <ul>
+            <li>Trang thông tin điện tử Đa Chiều</li>
+            <li>Trụ sở chính: 36 Xuân Thủy, Cầu Giấy, Hà Nội</li>
+            <li>Tel: +(84)12 3456.</li>
+            <li>E-mail: dachieu@gmail.com</li>
+        </ul>
+    </footer>
+
+    <script src="../../javaScript.js"></script>
+
+</body>
+
+</html>
